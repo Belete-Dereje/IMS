@@ -17,3 +17,4 @@ E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.csproj.Up2Date
 E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.LoginForm.resources
 E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.RegisterForm.resources
 E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.DashboardForm.resources
+E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.ProductsForm.resources
