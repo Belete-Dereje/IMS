@@ -32,45 +32,45 @@
             pnlHeader = new Panel();
             lblAppTitle = new Label();
             pnlSidebar = new Panel();
-            lblMenuTitle = new Label();
-            btnDashboard = new Button();
-            btnProducts = new Button();
-            btnCategories = new Button();
-            btnSuppliers = new Button();
-            btnTransactions = new Button();
-            btnReports = new Button();
-            btnStockIn = new Button();
             btnStockOut = new Button();
+            btnStockIn = new Button();
+            btnReports = new Button();
+            btnTransactions = new Button();
+            btnSuppliers = new Button();
+            btnCategories = new Button();
+            btnProducts = new Button();
+            btnDashboard = new Button();
+            lblMenuTitle = new Label();
             pnlContent = new Panel();
-            lblDashboardHeading = new Label();
-            pnlProductsCard = new Panel();
-            lblProductsTitle = new Label();
-            lblProductsCount = new Label();
-            pnlCategoriesCard = new Panel();
-            pnlLowStockCard = new Panel();
-            lblCategoriesTitle = new Label();
-            lblCategoriesCount = new Label();
-            lblLowStockTitle = new Label();
-            lblLowStockCount = new Label();
-            pnlTransactionsCard = new Panel();
-            lblTransactionsTitle = new Label();
-            lblTransactionsCount = new Label();
             pnlLowStockSection = new Panel();
-            lblLowStockSectionTitle = new Label();
+            lblLowStockStatus = new Label();
             lvLowStockProducts = new ListView();
             colProductCode = new ColumnHeader();
             colProductName = new ColumnHeader();
             colCurrentQuantity = new ColumnHeader();
             colMinimumStock = new ColumnHeader();
-            lblLowStockStatus = new Label();
+            lblLowStockSectionTitle = new Label();
+            pnlTransactionsCard = new Panel();
+            lblTransactionsCount = new Label();
+            lblTransactionsTitle = new Label();
+            pnlLowStockCard = new Panel();
+            lblLowStockCount = new Label();
+            lblLowStockTitle = new Label();
+            pnlCategoriesCard = new Panel();
+            lblCategoriesCount = new Label();
+            lblCategoriesTitle = new Label();
+            pnlProductsCard = new Panel();
+            lblProductsCount = new Label();
+            lblProductsTitle = new Label();
+            lblDashboardHeading = new Label();
             pnlHeader.SuspendLayout();
             pnlSidebar.SuspendLayout();
             pnlContent.SuspendLayout();
-            pnlProductsCard.SuspendLayout();
-            pnlCategoriesCard.SuspendLayout();
-            pnlLowStockCard.SuspendLayout();
-            pnlTransactionsCard.SuspendLayout();
             pnlLowStockSection.SuspendLayout();
+            pnlTransactionsCard.SuspendLayout();
+            pnlLowStockCard.SuspendLayout();
+            pnlCategoriesCard.SuspendLayout();
+            pnlProductsCard.SuspendLayout();
             SuspendLayout();
             // 
             // pnlHeader
@@ -112,64 +112,39 @@
             pnlSidebar.Size = new Size(210, 636);
             pnlSidebar.TabIndex = 1;
             // 
-            // lblMenuTitle
+            // btnStockOut
             // 
-            lblMenuTitle.AutoSize = true;
-            lblMenuTitle.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMenuTitle.ForeColor = Color.FromArgb(31, 58, 95);
-            lblMenuTitle.Location = new Point(15, 20);
-            lblMenuTitle.Name = "lblMenuTitle";
-            lblMenuTitle.Size = new Size(88, 17);
-            lblMenuTitle.TabIndex = 0;
-            lblMenuTitle.Text = "NAVIGATION";
+            btnStockOut.BackColor = Color.White;
+            btnStockOut.FlatStyle = FlatStyle.Flat;
+            btnStockOut.Location = new Point(10, 310);
+            btnStockOut.Name = "btnStockOut";
+            btnStockOut.Size = new Size(185, 42);
+            btnStockOut.TabIndex = 8;
+            btnStockOut.Text = "Stock Out";
+            btnStockOut.UseVisualStyleBackColor = false;
             // 
-            // btnDashboard
+            // btnStockIn
             // 
-            btnDashboard.BackColor = Color.FromArgb(47, 93, 138);
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(10, 60);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(185, 42);
-            btnDashboard.TabIndex = 1;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = false;
+            btnStockIn.BackColor = Color.White;
+            btnStockIn.FlatStyle = FlatStyle.Flat;
+            btnStockIn.Location = new Point(10, 260);
+            btnStockIn.Name = "btnStockIn";
+            btnStockIn.Size = new Size(185, 42);
+            btnStockIn.TabIndex = 7;
+            btnStockIn.Text = "Stock In";
+            btnStockIn.UseVisualStyleBackColor = false;
+            btnStockIn.Click += btnStockIn_Click;
             // 
-            // btnProducts
+            // btnReports
             // 
-            btnProducts.BackColor = Color.White;
-            btnProducts.FlatStyle = FlatStyle.Flat;
-            btnProducts.ForeColor = Color.FromArgb(31, 58, 95);
-            btnProducts.Location = new Point(10, 110);
-            btnProducts.Name = "btnProducts";
-            btnProducts.Size = new Size(185, 42);
-            btnProducts.TabIndex = 2;
-            btnProducts.Text = "Products";
-            btnProducts.UseVisualStyleBackColor = false;
-            // 
-            // btnCategories
-            // 
-            btnCategories.BackColor = Color.White;
-            btnCategories.FlatStyle = FlatStyle.Flat;
-            btnCategories.ForeColor = Color.FromArgb(31, 58, 95);
-            btnCategories.Location = new Point(10, 160);
-            btnCategories.Name = "btnCategories";
-            btnCategories.Size = new Size(185, 42);
-            btnCategories.TabIndex = 3;
-            btnCategories.Text = "Categories";
-            btnCategories.UseVisualStyleBackColor = false;
-            // 
-            // btnSuppliers
-            // 
-            btnSuppliers.BackColor = Color.White;
-            btnSuppliers.FlatStyle = FlatStyle.Flat;
-            btnSuppliers.ForeColor = Color.FromArgb(31, 58, 95);
-            btnSuppliers.Location = new Point(10, 210);
-            btnSuppliers.Name = "btnSuppliers";
-            btnSuppliers.Size = new Size(185, 42);
-            btnSuppliers.TabIndex = 4;
-            btnSuppliers.Text = "Suppliers";
-            btnSuppliers.UseVisualStyleBackColor = false;
+            btnReports.BackColor = Color.White;
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.Location = new Point(10, 410);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(185, 42);
+            btnReports.TabIndex = 6;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = false;
             // 
             // btnTransactions
             // 
@@ -183,38 +158,66 @@
             btnTransactions.Text = "Transactions";
             btnTransactions.UseVisualStyleBackColor = false;
             // 
-            // btnReports
+            // btnSuppliers
             // 
-            btnReports.BackColor = Color.White;
-            btnReports.FlatStyle = FlatStyle.Flat;
-            btnReports.Location = new Point(10, 410);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(185, 42);
-            btnReports.TabIndex = 6;
-            btnReports.Text = "Reports";
-            btnReports.UseVisualStyleBackColor = false;
+            btnSuppliers.BackColor = Color.White;
+            btnSuppliers.FlatStyle = FlatStyle.Flat;
+            btnSuppliers.ForeColor = Color.FromArgb(31, 58, 95);
+            btnSuppliers.Location = new Point(10, 210);
+            btnSuppliers.Name = "btnSuppliers";
+            btnSuppliers.Size = new Size(185, 42);
+            btnSuppliers.TabIndex = 4;
+            btnSuppliers.Text = "Suppliers";
+            btnSuppliers.UseVisualStyleBackColor = false;
             // 
-            // btnStockIn
+            // btnCategories
             // 
-            btnStockIn.BackColor = Color.White;
-            btnStockIn.FlatStyle = FlatStyle.Flat;
-            btnStockIn.Location = new Point(10, 260);
-            btnStockIn.Name = "btnStockIn";
-            btnStockIn.Size = new Size(185, 42);
-            btnStockIn.TabIndex = 7;
-            btnStockIn.Text = "Stock In";
-            btnStockIn.UseVisualStyleBackColor = false;
+            btnCategories.BackColor = Color.White;
+            btnCategories.FlatStyle = FlatStyle.Flat;
+            btnCategories.ForeColor = Color.FromArgb(31, 58, 95);
+            btnCategories.Location = new Point(10, 160);
+            btnCategories.Name = "btnCategories";
+            btnCategories.Size = new Size(185, 42);
+            btnCategories.TabIndex = 3;
+            btnCategories.Text = "Categories";
+            btnCategories.UseVisualStyleBackColor = false;
             // 
-            // btnStockOut
+            // btnProducts
             // 
-            btnStockOut.BackColor = Color.White;
-            btnStockOut.FlatStyle = FlatStyle.Flat;
-            btnStockOut.Location = new Point(10, 310);
-            btnStockOut.Name = "btnStockOut";
-            btnStockOut.Size = new Size(185, 42);
-            btnStockOut.TabIndex = 8;
-            btnStockOut.Text = "Stock Out";
-            btnStockOut.UseVisualStyleBackColor = false;
+            btnProducts.BackColor = Color.White;
+            btnProducts.FlatStyle = FlatStyle.Flat;
+            btnProducts.ForeColor = Color.FromArgb(31, 58, 95);
+            btnProducts.Location = new Point(10, 110);
+            btnProducts.Name = "btnProducts";
+            btnProducts.Size = new Size(185, 42);
+            btnProducts.TabIndex = 2;
+            btnProducts.Text = "Products";
+            btnProducts.UseVisualStyleBackColor = false;
+            btnProducts.Click += btnProducts_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.FromArgb(47, 93, 138);
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Location = new Point(10, 60);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(185, 42);
+            btnDashboard.TabIndex = 1;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // lblMenuTitle
+            // 
+            lblMenuTitle.AutoSize = true;
+            lblMenuTitle.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMenuTitle.ForeColor = Color.FromArgb(31, 58, 95);
+            lblMenuTitle.Location = new Point(15, 20);
+            lblMenuTitle.Name = "lblMenuTitle";
+            lblMenuTitle.Size = new Size(88, 17);
+            lblMenuTitle.TabIndex = 0;
+            lblMenuTitle.Text = "NAVIGATION";
             // 
             // pnlContent
             // 
@@ -230,144 +233,6 @@
             pnlContent.Size = new Size(940, 590);
             pnlContent.TabIndex = 2;
             // 
-            // lblDashboardHeading
-            // 
-            lblDashboardHeading.AutoSize = true;
-            lblDashboardHeading.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDashboardHeading.Location = new Point(20, 15);
-            lblDashboardHeading.Name = "lblDashboardHeading";
-            lblDashboardHeading.Size = new Size(252, 32);
-            lblDashboardHeading.TabIndex = 0;
-            lblDashboardHeading.Text = "Dashboard Overview";
-            // 
-            // pnlProductsCard
-            // 
-            pnlProductsCard.BackColor = Color.White;
-            pnlProductsCard.BorderStyle = BorderStyle.FixedSingle;
-            pnlProductsCard.Controls.Add(lblProductsCount);
-            pnlProductsCard.Controls.Add(lblProductsTitle);
-            pnlProductsCard.Location = new Point(20, 65);
-            pnlProductsCard.Name = "pnlProductsCard";
-            pnlProductsCard.Size = new Size(210, 120);
-            pnlProductsCard.TabIndex = 1;
-            // 
-            // lblProductsTitle
-            // 
-            lblProductsTitle.AutoSize = true;
-            lblProductsTitle.Font = new Font("Segoe UI", 10F);
-            lblProductsTitle.ForeColor = Color.FromArgb(107, 114, 128);
-            lblProductsTitle.Location = new Point(15, 15);
-            lblProductsTitle.Name = "lblProductsTitle";
-            lblProductsTitle.Size = new Size(96, 19);
-            lblProductsTitle.TabIndex = 0;
-            lblProductsTitle.Text = "Total Products";
-            // 
-            // lblProductsCount
-            // 
-            lblProductsCount.AutoSize = true;
-            lblProductsCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProductsCount.Location = new Point(15, 53);
-            lblProductsCount.Name = "lblProductsCount";
-            lblProductsCount.Size = new Size(34, 40);
-            lblProductsCount.TabIndex = 1;
-            lblProductsCount.Text = "0";
-            // 
-            // pnlCategoriesCard
-            // 
-            pnlCategoriesCard.BackColor = Color.White;
-            pnlCategoriesCard.BorderStyle = BorderStyle.FixedSingle;
-            pnlCategoriesCard.Controls.Add(lblCategoriesCount);
-            pnlCategoriesCard.Controls.Add(lblCategoriesTitle);
-            pnlCategoriesCard.Location = new Point(245, 65);
-            pnlCategoriesCard.Name = "pnlCategoriesCard";
-            pnlCategoriesCard.Size = new Size(210, 120);
-            pnlCategoriesCard.TabIndex = 2;
-            // 
-            // pnlLowStockCard
-            // 
-            pnlLowStockCard.BackColor = Color.White;
-            pnlLowStockCard.BorderStyle = BorderStyle.FixedSingle;
-            pnlLowStockCard.Controls.Add(lblLowStockCount);
-            pnlLowStockCard.Controls.Add(lblLowStockTitle);
-            pnlLowStockCard.Location = new Point(470, 65);
-            pnlLowStockCard.Name = "pnlLowStockCard";
-            pnlLowStockCard.Size = new Size(210, 120);
-            pnlLowStockCard.TabIndex = 3;
-            // 
-            // lblCategoriesTitle
-            // 
-            lblCategoriesTitle.AutoSize = true;
-            lblCategoriesTitle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoriesTitle.ForeColor = Color.FromArgb(107, 114, 128);
-            lblCategoriesTitle.Location = new Point(15, 15);
-            lblCategoriesTitle.Name = "lblCategoriesTitle";
-            lblCategoriesTitle.Size = new Size(103, 17);
-            lblCategoriesTitle.TabIndex = 0;
-            lblCategoriesTitle.Text = "Total Categories";
-            // 
-            // lblCategoriesCount
-            // 
-            lblCategoriesCount.AutoSize = true;
-            lblCategoriesCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategoriesCount.Location = new Point(15, 50);
-            lblCategoriesCount.Name = "lblCategoriesCount";
-            lblCategoriesCount.Size = new Size(34, 40);
-            lblCategoriesCount.TabIndex = 1;
-            lblCategoriesCount.Text = "0";
-            // 
-            // lblLowStockTitle
-            // 
-            lblLowStockTitle.AutoSize = true;
-            lblLowStockTitle.Font = new Font("Segoe UI", 10F);
-            lblLowStockTitle.ForeColor = Color.FromArgb(107, 114, 128);
-            lblLowStockTitle.Location = new Point(15, 15);
-            lblLowStockTitle.Name = "lblLowStockTitle";
-            lblLowStockTitle.Size = new Size(109, 19);
-            lblLowStockTitle.TabIndex = 0;
-            lblLowStockTitle.Text = "Low Stock Items";
-            // 
-            // lblLowStockCount
-            // 
-            lblLowStockCount.AutoSize = true;
-            lblLowStockCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLowStockCount.Location = new Point(15, 50);
-            lblLowStockCount.Name = "lblLowStockCount";
-            lblLowStockCount.Size = new Size(34, 40);
-            lblLowStockCount.TabIndex = 1;
-            lblLowStockCount.Text = "0";
-            // 
-            // pnlTransactionsCard
-            // 
-            pnlTransactionsCard.BackColor = Color.White;
-            pnlTransactionsCard.BorderStyle = BorderStyle.FixedSingle;
-            pnlTransactionsCard.Controls.Add(lblTransactionsCount);
-            pnlTransactionsCard.Controls.Add(lblTransactionsTitle);
-            pnlTransactionsCard.Location = new Point(695, 65);
-            pnlTransactionsCard.Name = "pnlTransactionsCard";
-            pnlTransactionsCard.Size = new Size(210, 120);
-            pnlTransactionsCard.TabIndex = 4;
-            // 
-            // lblTransactionsTitle
-            // 
-            lblTransactionsTitle.AutoSize = true;
-            lblTransactionsTitle.Font = new Font("Segoe UI", 10F);
-            lblTransactionsTitle.ForeColor = Color.FromArgb(107, 114, 128);
-            lblTransactionsTitle.Location = new Point(15, 15);
-            lblTransactionsTitle.Name = "lblTransactionsTitle";
-            lblTransactionsTitle.Size = new Size(133, 19);
-            lblTransactionsTitle.TabIndex = 0;
-            lblTransactionsTitle.Text = "Today's Transactions";
-            // 
-            // lblTransactionsCount
-            // 
-            lblTransactionsCount.AutoSize = true;
-            lblTransactionsCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTransactionsCount.Location = new Point(15, 50);
-            lblTransactionsCount.Name = "lblTransactionsCount";
-            lblTransactionsCount.Size = new Size(34, 40);
-            lblTransactionsCount.TabIndex = 1;
-            lblTransactionsCount.Text = "0";
-            // 
             // pnlLowStockSection
             // 
             pnlLowStockSection.BackColor = Color.White;
@@ -380,15 +245,15 @@
             pnlLowStockSection.Size = new Size(885, 320);
             pnlLowStockSection.TabIndex = 5;
             // 
-            // lblLowStockSectionTitle
+            // lblLowStockStatus
             // 
-            lblLowStockSectionTitle.AutoSize = true;
-            lblLowStockSectionTitle.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLowStockSectionTitle.Location = new Point(20, 15);
-            lblLowStockSectionTitle.Name = "lblLowStockSectionTitle";
-            lblLowStockSectionTitle.Size = new Size(189, 25);
-            lblLowStockSectionTitle.TabIndex = 0;
-            lblLowStockSectionTitle.Text = "Low Stock Products";
+            lblLowStockStatus.AutoSize = true;
+            lblLowStockStatus.ForeColor = Color.FromArgb(107, 114, 128);
+            lblLowStockStatus.Location = new Point(15, 280);
+            lblLowStockStatus.Name = "lblLowStockStatus";
+            lblLowStockStatus.Size = new Size(163, 15);
+            lblLowStockStatus.TabIndex = 2;
+            lblLowStockStatus.Text = "No low-stock products found";
             // 
             // lvLowStockProducts
             // 
@@ -424,15 +289,153 @@
             colMinimumStock.Text = "Minimum Stock";
             colMinimumStock.Width = 150;
             // 
-            // lblLowStockStatus
+            // lblLowStockSectionTitle
             // 
-            lblLowStockStatus.AutoSize = true;
-            lblLowStockStatus.ForeColor = Color.FromArgb(107, 114, 128);
-            lblLowStockStatus.Location = new Point(15, 280);
-            lblLowStockStatus.Name = "lblLowStockStatus";
-            lblLowStockStatus.Size = new Size(163, 15);
-            lblLowStockStatus.TabIndex = 2;
-            lblLowStockStatus.Text = "No low-stock products found";
+            lblLowStockSectionTitle.AutoSize = true;
+            lblLowStockSectionTitle.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLowStockSectionTitle.Location = new Point(20, 15);
+            lblLowStockSectionTitle.Name = "lblLowStockSectionTitle";
+            lblLowStockSectionTitle.Size = new Size(189, 25);
+            lblLowStockSectionTitle.TabIndex = 0;
+            lblLowStockSectionTitle.Text = "Low Stock Products";
+            // 
+            // pnlTransactionsCard
+            // 
+            pnlTransactionsCard.BackColor = Color.White;
+            pnlTransactionsCard.BorderStyle = BorderStyle.FixedSingle;
+            pnlTransactionsCard.Controls.Add(lblTransactionsCount);
+            pnlTransactionsCard.Controls.Add(lblTransactionsTitle);
+            pnlTransactionsCard.Location = new Point(695, 65);
+            pnlTransactionsCard.Name = "pnlTransactionsCard";
+            pnlTransactionsCard.Size = new Size(210, 120);
+            pnlTransactionsCard.TabIndex = 4;
+            // 
+            // lblTransactionsCount
+            // 
+            lblTransactionsCount.AutoSize = true;
+            lblTransactionsCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTransactionsCount.Location = new Point(15, 50);
+            lblTransactionsCount.Name = "lblTransactionsCount";
+            lblTransactionsCount.Size = new Size(34, 40);
+            lblTransactionsCount.TabIndex = 1;
+            lblTransactionsCount.Text = "0";
+            // 
+            // lblTransactionsTitle
+            // 
+            lblTransactionsTitle.AutoSize = true;
+            lblTransactionsTitle.Font = new Font("Segoe UI", 10F);
+            lblTransactionsTitle.ForeColor = Color.FromArgb(107, 114, 128);
+            lblTransactionsTitle.Location = new Point(15, 15);
+            lblTransactionsTitle.Name = "lblTransactionsTitle";
+            lblTransactionsTitle.Size = new Size(133, 19);
+            lblTransactionsTitle.TabIndex = 0;
+            lblTransactionsTitle.Text = "Today's Transactions";
+            // 
+            // pnlLowStockCard
+            // 
+            pnlLowStockCard.BackColor = Color.White;
+            pnlLowStockCard.BorderStyle = BorderStyle.FixedSingle;
+            pnlLowStockCard.Controls.Add(lblLowStockCount);
+            pnlLowStockCard.Controls.Add(lblLowStockTitle);
+            pnlLowStockCard.Location = new Point(470, 65);
+            pnlLowStockCard.Name = "pnlLowStockCard";
+            pnlLowStockCard.Size = new Size(210, 120);
+            pnlLowStockCard.TabIndex = 3;
+            // 
+            // lblLowStockCount
+            // 
+            lblLowStockCount.AutoSize = true;
+            lblLowStockCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLowStockCount.Location = new Point(15, 50);
+            lblLowStockCount.Name = "lblLowStockCount";
+            lblLowStockCount.Size = new Size(34, 40);
+            lblLowStockCount.TabIndex = 1;
+            lblLowStockCount.Text = "0";
+            // 
+            // lblLowStockTitle
+            // 
+            lblLowStockTitle.AutoSize = true;
+            lblLowStockTitle.Font = new Font("Segoe UI", 10F);
+            lblLowStockTitle.ForeColor = Color.FromArgb(107, 114, 128);
+            lblLowStockTitle.Location = new Point(15, 15);
+            lblLowStockTitle.Name = "lblLowStockTitle";
+            lblLowStockTitle.Size = new Size(109, 19);
+            lblLowStockTitle.TabIndex = 0;
+            lblLowStockTitle.Text = "Low Stock Items";
+            // 
+            // pnlCategoriesCard
+            // 
+            pnlCategoriesCard.BackColor = Color.White;
+            pnlCategoriesCard.BorderStyle = BorderStyle.FixedSingle;
+            pnlCategoriesCard.Controls.Add(lblCategoriesCount);
+            pnlCategoriesCard.Controls.Add(lblCategoriesTitle);
+            pnlCategoriesCard.Location = new Point(245, 65);
+            pnlCategoriesCard.Name = "pnlCategoriesCard";
+            pnlCategoriesCard.Size = new Size(210, 120);
+            pnlCategoriesCard.TabIndex = 2;
+            // 
+            // lblCategoriesCount
+            // 
+            lblCategoriesCount.AutoSize = true;
+            lblCategoriesCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCategoriesCount.Location = new Point(15, 50);
+            lblCategoriesCount.Name = "lblCategoriesCount";
+            lblCategoriesCount.Size = new Size(34, 40);
+            lblCategoriesCount.TabIndex = 1;
+            lblCategoriesCount.Text = "0";
+            // 
+            // lblCategoriesTitle
+            // 
+            lblCategoriesTitle.AutoSize = true;
+            lblCategoriesTitle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCategoriesTitle.ForeColor = Color.FromArgb(107, 114, 128);
+            lblCategoriesTitle.Location = new Point(15, 15);
+            lblCategoriesTitle.Name = "lblCategoriesTitle";
+            lblCategoriesTitle.Size = new Size(103, 17);
+            lblCategoriesTitle.TabIndex = 0;
+            lblCategoriesTitle.Text = "Total Categories";
+            // 
+            // pnlProductsCard
+            // 
+            pnlProductsCard.BackColor = Color.White;
+            pnlProductsCard.BorderStyle = BorderStyle.FixedSingle;
+            pnlProductsCard.Controls.Add(lblProductsCount);
+            pnlProductsCard.Controls.Add(lblProductsTitle);
+            pnlProductsCard.Location = new Point(20, 65);
+            pnlProductsCard.Name = "pnlProductsCard";
+            pnlProductsCard.Size = new Size(210, 120);
+            pnlProductsCard.TabIndex = 1;
+            // 
+            // lblProductsCount
+            // 
+            lblProductsCount.AutoSize = true;
+            lblProductsCount.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblProductsCount.Location = new Point(15, 53);
+            lblProductsCount.Name = "lblProductsCount";
+            lblProductsCount.Size = new Size(34, 40);
+            lblProductsCount.TabIndex = 1;
+            lblProductsCount.Text = "0";
+            // 
+            // lblProductsTitle
+            // 
+            lblProductsTitle.AutoSize = true;
+            lblProductsTitle.Font = new Font("Segoe UI", 10F);
+            lblProductsTitle.ForeColor = Color.FromArgb(107, 114, 128);
+            lblProductsTitle.Location = new Point(15, 15);
+            lblProductsTitle.Name = "lblProductsTitle";
+            lblProductsTitle.Size = new Size(96, 19);
+            lblProductsTitle.TabIndex = 0;
+            lblProductsTitle.Text = "Total Products";
+            // 
+            // lblDashboardHeading
+            // 
+            lblDashboardHeading.AutoSize = true;
+            lblDashboardHeading.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboardHeading.Location = new Point(20, 15);
+            lblDashboardHeading.Name = "lblDashboardHeading";
+            lblDashboardHeading.Size = new Size(252, 32);
+            lblDashboardHeading.TabIndex = 0;
+            lblDashboardHeading.Text = "Dashboard Overview";
             // 
             // DashboardForm
             // 
@@ -453,16 +456,16 @@
             pnlSidebar.PerformLayout();
             pnlContent.ResumeLayout(false);
             pnlContent.PerformLayout();
-            pnlProductsCard.ResumeLayout(false);
-            pnlProductsCard.PerformLayout();
-            pnlCategoriesCard.ResumeLayout(false);
-            pnlCategoriesCard.PerformLayout();
-            pnlLowStockCard.ResumeLayout(false);
-            pnlLowStockCard.PerformLayout();
-            pnlTransactionsCard.ResumeLayout(false);
-            pnlTransactionsCard.PerformLayout();
             pnlLowStockSection.ResumeLayout(false);
             pnlLowStockSection.PerformLayout();
+            pnlTransactionsCard.ResumeLayout(false);
+            pnlTransactionsCard.PerformLayout();
+            pnlLowStockCard.ResumeLayout(false);
+            pnlLowStockCard.PerformLayout();
+            pnlCategoriesCard.ResumeLayout(false);
+            pnlCategoriesCard.PerformLayout();
+            pnlProductsCard.ResumeLayout(false);
+            pnlProductsCard.PerformLayout();
             ResumeLayout(false);
         }
 
