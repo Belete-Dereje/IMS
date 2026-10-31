@@ -274,7 +274,6 @@
             cmbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategory.Font = new Font("Segoe UI", 10F);
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Items.AddRange(new object[] { "Stationery", "Electronics", "Food and Beverages", "Cleaning Supplies", "Other" });
             cmbCategory.Location = new Point(140, 50);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(220, 25);
