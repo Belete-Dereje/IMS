@@ -14,6 +14,12 @@ namespace IMS
         {
             InitializeComponent();
 
+            // Hide the page panel when Dashboard starts
+            pnlPageHost.Visible = false;
+
+            // Keep the Dashboard controls in front
+            pnlPageHost.SendToBack();
+
             RefreshDashboard();
         }
 
@@ -24,21 +30,49 @@ namespace IMS
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            ProductsForm productsForm = new ProductsForm();
-
-            productsForm.FormClosed += (s, args) =>
-            {
-                this.Show();
-                RefreshDashboard();
-            };
-
-            this.Hide();
-            productsForm.Show();
+            ShowPage(new ProductsForm());
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            pnlPageHost.Visible = false;
 
+            // Move the page panel behind Dashboard controls
+            pnlPageHost.SendToBack();
+
+            RefreshDashboard();
+        }
+        private void ShowPage(Form page)
+        {
+            // Remove the previous page
+            pnlPageHost.Controls.Clear();
+
+            // Prepare the selected form
+            page.TopLevel = false;
+            page.FormBorderStyle = FormBorderStyle.None;
+            page.Dock = DockStyle.Fill;
+
+            // Allow scrolling when the page is larger than the panel
+            page.AutoScroll = true;
+
+            // Add the form to the panel
+            pnlPageHost.Controls.Add(page);
+
+            // Handle closing the page
+            page.FormClosed += (s, args) =>
+            {
+                pnlPageHost.Visible = false;
+                pnlPageHost.SendToBack();
+
+                RefreshDashboard();
+            };
+
+            // Display the page panel
+            pnlPageHost.Visible = true;
+            pnlPageHost.BringToFront();
+
+            // Display the selected form
+            page.Show();
         }
         private void RefreshDashboard()
         {
@@ -110,18 +144,25 @@ namespace IMS
             }
         }
 
+
         private void btnStockIn_Click(object sender, EventArgs e)
         {
-            StockInForm stockInForm = new StockInForm();
+            ShowPage(new StockInForm());
+        }
 
-            stockInForm.FormClosed += (s, args) =>
-            {
-                this.Show();
-                RefreshDashboard();
-            };
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            ShowPage(new SuppliersForm());
+        }
 
-            this.Hide();
-            stockInForm.Show();
+        private void btnStockOut_Click(object sender, EventArgs e)
+        {
+            ShowPage(new StockOutForm());
+        }
+
+        private void btnTransactions_Click(object sender, EventArgs e)
+        {
+            ShowPage(new TransactionsForm());
         }
     }
 
