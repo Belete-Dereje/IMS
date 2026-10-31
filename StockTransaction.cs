@@ -8,6 +8,7 @@ namespace IMS
     {
         public string ProductCode { get; set; } = "";
         public string ProductName { get; set; } = "";
+        public string SupplierCode { get; set; } = "";
 
         public string TransactionType { get; set; } = "";
 

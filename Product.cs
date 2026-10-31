@@ -10,6 +10,7 @@ namespace IMS
         public string ProductName { get; set; } = "";
         public string Category { get; set; } = "";
         public string Unit { get; set; } = "";
+        public string SupplierCode { get; set; } = "";
 
         public decimal PurchaseCost { get; set; }
         public decimal SellingPrice { get; set; }

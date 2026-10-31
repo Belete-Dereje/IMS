@@ -19,3 +19,6 @@ E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.RegisterForm.resour
 E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.DashboardForm.resources
 E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.ProductsForm.resources
 E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.StockInForm.resources
+E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.SuppliersForm.resources
+E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.StockOutForm.resources
+E:\InventoryManagement\IMS\IMS\obj\Debug\net10.0-windows\IMS.TransactionsForm.resources

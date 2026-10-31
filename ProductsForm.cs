@@ -15,6 +15,10 @@ namespace IMS
         {
             InitializeComponent();
 
+            // Load registered suppliers
+            cmbSupplier.DisplayMember = "SupplierName";
+            cmbSupplier.ValueMember = "SupplierCode";
+            cmbSupplier.DataSource = InventoryData.Suppliers;
             // Display the saved in-memory products
             RefreshProductList();
         }
@@ -31,6 +35,7 @@ namespace IMS
 
             cmbCategory.SelectedIndex = -1;
             cmbUnit.SelectedIndex = -1;
+            cmbSupplier.SelectedIndex = -1;
 
             numPurchaseCost.Value = 0;
             numSellingPrice.Value = 0;
@@ -58,6 +63,16 @@ namespace IMS
                 MessageBox.Show("Please select a Category and Unit.");
                 return;
             }
+
+            // Check that a supplier is selected
+            if (cmbSupplier.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a supplier.");
+                return;
+            }
+
+            // Get the selected supplier
+            Supplier selectedSupplier = (Supplier)cmbSupplier.SelectedItem;
 
             // Find the product currently being edited, if any.
             Product productBeingEdited = null;
@@ -99,6 +114,7 @@ namespace IMS
                 product.ProductName = name;
                 product.Category = cmbCategory.SelectedItem.ToString();
                 product.Unit = cmbUnit.SelectedItem.ToString();
+                product.SupplierCode = selectedSupplier.SupplierCode;
                 product.PurchaseCost = numPurchaseCost.Value;
                 product.SellingPrice = numSellingPrice.Value;
                 product.Quantity = (int)numInitialQuantity.Value;
@@ -113,6 +129,7 @@ namespace IMS
                     ProductName = name,
                     Category = cmbCategory.SelectedItem.ToString(),
                     Unit = cmbUnit.SelectedItem.ToString(),
+                    SupplierCode = selectedSupplier.SupplierCode,
                     PurchaseCost = numPurchaseCost.Value,
                     SellingPrice = numSellingPrice.Value,
                     Quantity = (int)numInitialQuantity.Value,
@@ -121,6 +138,7 @@ namespace IMS
 
                 InventoryData.Products.Add(product);
             }
+            
 
             // Find the existing row when updating.
             RefreshProductList();
@@ -165,6 +183,7 @@ namespace IMS
 
             cmbCategory.SelectedItem = product.Category;
             cmbUnit.SelectedItem = product.Unit;
+            cmbSupplier.SelectedValue = product.SupplierCode;
 
             numPurchaseCost.Value = product.PurchaseCost;
             numSellingPrice.Value = product.SellingPrice;
@@ -232,19 +251,35 @@ namespace IMS
         {
             string searchText = txtSearchProducts.Text.Trim();
 
-            // Clear the displayed rows
+            // Clear the current table
             lvProducts.Items.Clear();
 
             // Check every product
             foreach (Product product in InventoryData.Products)
             {
-                // Show only products matching the search
+                // Search by product code or product name
                 if (product.ProductCode.IndexOf(
                         searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
                     product.ProductName.IndexOf(
                         searchText, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
-                    ListViewItem item = new ListViewItem(product.ProductCode);
+                    // Find the supplier name
+                    string supplierName = "Not assigned";
+
+                    foreach (Supplier supplier in InventoryData.Suppliers)
+                    {
+                        if (supplier.SupplierCode.Equals(
+                            product.SupplierCode,
+                            StringComparison.OrdinalIgnoreCase))
+                        {
+                            supplierName = supplier.SupplierName;
+                            break;
+                        }
+                    }
+
+                    // Create a product row
+                    ListViewItem item =
+                        new ListViewItem(product.ProductCode);
 
                     item.SubItems.Add(product.ProductName);
                     item.SubItems.Add(product.Category);
@@ -258,6 +293,10 @@ namespace IMS
 
                     item.SubItems.Add(status);
 
+                    // Display supplier name
+                    item.SubItems.Add(supplierName);
+
+                    // Add the row to the table
                     lvProducts.Items.Add(item);
                 }
             }
