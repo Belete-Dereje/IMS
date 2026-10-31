@@ -169,6 +169,11 @@ namespace IMS
         {
             ShowPage(new TransactionsForm());
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            ShowPage(new ReportsForm());
+        }
     }
 
 }
