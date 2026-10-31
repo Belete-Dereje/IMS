@@ -185,6 +185,7 @@
             btnCategories.TabIndex = 3;
             btnCategories.Text = "Categories";
             btnCategories.UseVisualStyleBackColor = false;
+            btnCategories.Click += btnCategories_Click;
             // 
             // btnProducts
             // 

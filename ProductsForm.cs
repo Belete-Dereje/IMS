@@ -15,6 +15,9 @@ namespace IMS
         {
             InitializeComponent();
 
+            // Load shared categories
+            cmbCategory.DataSource = InventoryData.Categories;
+
             // Load registered suppliers
             cmbSupplier.DisplayMember = "SupplierName";
             cmbSupplier.ValueMember = "SupplierCode";
