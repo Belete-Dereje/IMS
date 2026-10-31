@@ -33,6 +33,11 @@ namespace IMS
             ShowPage(new ProductsForm());
         }
 
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            ShowPage(new CatagoriesForm());
+        }
+
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             pnlPageHost.Visible = false;

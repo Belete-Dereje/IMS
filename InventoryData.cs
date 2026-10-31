@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-using System.Collections.Generic;
-
 namespace IMS
 {
     public static class InventoryData
@@ -19,5 +17,9 @@ namespace IMS
         // Stores all suppliers
         public static List<Supplier> Suppliers { get; }
             = new List<Supplier>();
+
+        // Stores all category names
+        public static List<string> Categories { get; }
+            = new List<string>();
     }
 }
