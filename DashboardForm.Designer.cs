@@ -42,6 +42,7 @@
             btnDashboard = new Button();
             lblMenuTitle = new Label();
             pnlContent = new Panel();
+            pnlPageHost = new Panel();
             pnlLowStockSection = new Panel();
             lblLowStockStatus = new Label();
             lvLowStockProducts = new ListView();
@@ -122,6 +123,7 @@
             btnStockOut.TabIndex = 8;
             btnStockOut.Text = "Stock Out";
             btnStockOut.UseVisualStyleBackColor = false;
+            btnStockOut.Click += btnStockOut_Click;
             // 
             // btnStockIn
             // 
@@ -157,6 +159,7 @@
             btnTransactions.TabIndex = 5;
             btnTransactions.Text = "Transactions";
             btnTransactions.UseVisualStyleBackColor = false;
+            btnTransactions.Click += btnTransactions_Click;
             // 
             // btnSuppliers
             // 
@@ -169,6 +172,7 @@
             btnSuppliers.TabIndex = 4;
             btnSuppliers.Text = "Suppliers";
             btnSuppliers.UseVisualStyleBackColor = false;
+            btnSuppliers.Click += btnSuppliers_Click;
             // 
             // btnCategories
             // 
@@ -222,16 +226,31 @@
             // pnlContent
             // 
             pnlContent.BackColor = Color.FromArgb(244, 246, 249);
+            pnlContent.Controls.Add(pnlPageHost);
             pnlContent.Controls.Add(pnlLowStockSection);
             pnlContent.Controls.Add(pnlTransactionsCard);
             pnlContent.Controls.Add(pnlLowStockCard);
             pnlContent.Controls.Add(pnlCategoriesCard);
             pnlContent.Controls.Add(pnlProductsCard);
             pnlContent.Controls.Add(lblDashboardHeading);
-            pnlContent.Location = new Point(225, 95);
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(210, 75);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(940, 590);
+            pnlContent.Size = new Size(974, 636);
             pnlContent.TabIndex = 2;
+            // 
+            // pnlPageHost
+            // 
+            pnlPageHost.AllowDrop = true;
+            pnlPageHost.AutoScroll = true;
+            pnlPageHost.AutoSize = true;
+            pnlPageHost.Dock = DockStyle.Fill;
+            pnlPageHost.Location = new Point(0, 0);
+            pnlPageHost.Margin = new Padding(0);
+            pnlPageHost.Name = "pnlPageHost";
+            pnlPageHost.Size = new Size(974, 636);
+            pnlPageHost.TabIndex = 7;
+            pnlPageHost.Visible = false;
             // 
             // pnlLowStockSection
             // 
@@ -505,5 +524,6 @@
         public ColumnHeader colCurrentQuantity;
         private ColumnHeader colMinimumStock;
         private Label lblLowStockStatus;
+        private Panel pnlPageHost;
     }
 }

@@ -30,6 +30,7 @@
         {
             lblStockInHeading = new Label();
             pnlStockInEntry = new Panel();
+            lblSupplier = new Label();
             btnStockIn = new Button();
             txtNotes = new TextBox();
             lblNotes = new Label();
@@ -37,6 +38,7 @@
             lblQuantity = new Label();
             cmbProduct = new ComboBox();
             lblProduct = new Label();
+            cmbSupplier = new ComboBox();
             pnlStockInEntry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numQuantity).BeginInit();
             SuspendLayout();
@@ -56,6 +58,8 @@
             // 
             pnlStockInEntry.BackColor = Color.White;
             pnlStockInEntry.BorderStyle = BorderStyle.FixedSingle;
+            pnlStockInEntry.Controls.Add(cmbSupplier);
+            pnlStockInEntry.Controls.Add(lblSupplier);
             pnlStockInEntry.Controls.Add(btnStockIn);
             pnlStockInEntry.Controls.Add(txtNotes);
             pnlStockInEntry.Controls.Add(lblNotes);
@@ -67,6 +71,17 @@
             pnlStockInEntry.Name = "pnlStockInEntry";
             pnlStockInEntry.Size = new Size(730, 220);
             pnlStockInEntry.TabIndex = 1;
+            // 
+            // lblSupplier
+            // 
+            lblSupplier.AutoSize = true;
+            lblSupplier.Font = new Font("Segoe UI", 10F);
+            lblSupplier.ForeColor = Color.FromArgb(31, 41, 55);
+            lblSupplier.Location = new Point(460, 25);
+            lblSupplier.Name = "lblSupplier";
+            lblSupplier.Size = new Size(58, 19);
+            lblSupplier.TabIndex = 7;
+            lblSupplier.Text = "Supplier";
             // 
             // btnStockIn
             // 
@@ -146,6 +161,16 @@
             lblProduct.TabIndex = 0;
             lblProduct.Text = "Product";
             // 
+            // cmbSupplier
+            // 
+            cmbSupplier.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSupplier.Font = new Font("Segoe UI", 10F);
+            cmbSupplier.FormattingEnabled = true;
+            cmbSupplier.Location = new Point(535, 21);
+            cmbSupplier.Name = "cmbSupplier";
+            cmbSupplier.Size = new Size(175, 25);
+            cmbSupplier.TabIndex = 8;
+            // 
             // StockInForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -176,5 +201,7 @@
         private Label lblNotes;
         private TextBox txtNotes;
         private Button btnStockIn;
+        private Label lblSupplier;
+        private ComboBox cmbSupplier;
     }
 }

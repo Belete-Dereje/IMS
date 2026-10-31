@@ -30,6 +30,8 @@
         {
             lblProductsHeading = new Label();
             pnlProductEntry = new Panel();
+            cmbSupplier = new ComboBox();
+            lblSupplier = new Label();
             btnClear = new Button();
             btnAddProduct = new Button();
             numMinimumStock = new NumericUpDown();
@@ -59,6 +61,7 @@
             colUnit = new ColumnHeader();
             colSellingPrice = new ColumnHeader();
             colStockStatus = new ColumnHeader();
+            colSupplier = new ColumnHeader();
             txtSearchProducts = new TextBox();
             lblProductListTitle = new Label();
             btnBackToDashboard = new Button();
@@ -85,6 +88,8 @@
             // 
             pnlProductEntry.BackColor = Color.White;
             pnlProductEntry.BorderStyle = BorderStyle.FixedSingle;
+            pnlProductEntry.Controls.Add(cmbSupplier);
+            pnlProductEntry.Controls.Add(lblSupplier);
             pnlProductEntry.Controls.Add(btnClear);
             pnlProductEntry.Controls.Add(btnAddProduct);
             pnlProductEntry.Controls.Add(numMinimumStock);
@@ -103,10 +108,31 @@
             pnlProductEntry.Controls.Add(lblProductName);
             pnlProductEntry.Controls.Add(txtProductCode);
             pnlProductEntry.Controls.Add(lblProductCode);
-            pnlProductEntry.Location = new Point(25, 70);
+            pnlProductEntry.Location = new Point(10, 70);
             pnlProductEntry.Name = "pnlProductEntry";
-            pnlProductEntry.Size = new Size(1030, 250);
+            pnlProductEntry.Size = new Size(934, 230);
             pnlProductEntry.TabIndex = 1;
+            // 
+            // cmbSupplier
+            // 
+            cmbSupplier.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSupplier.Font = new Font("Segoe UI", 10F);
+            cmbSupplier.FormattingEnabled = true;
+            cmbSupplier.Location = new Point(737, 16);
+            cmbSupplier.Name = "cmbSupplier";
+            cmbSupplier.Size = new Size(190, 25);
+            cmbSupplier.TabIndex = 20;
+            // 
+            // lblSupplier
+            // 
+            lblSupplier.AutoSize = true;
+            lblSupplier.Font = new Font("Segoe UI", 10F);
+            lblSupplier.ForeColor = Color.FromArgb(31, 41, 55);
+            lblSupplier.Location = new Point(673, 16);
+            lblSupplier.Name = "lblSupplier";
+            lblSupplier.Size = new Size(58, 19);
+            lblSupplier.TabIndex = 19;
+            lblSupplier.Text = "Supplier";
             // 
             // btnClear
             // 
@@ -114,7 +140,7 @@
             btnClear.FlatStyle = FlatStyle.Flat;
             btnClear.Font = new Font("Segoe UI", 10F);
             btnClear.ForeColor = Color.FromArgb(31, 58, 95);
-            btnClear.Location = new Point(700, 205);
+            btnClear.Location = new Point(641, 180);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(90, 35);
             btnClear.TabIndex = 18;
@@ -128,7 +154,7 @@
             btnAddProduct.FlatStyle = FlatStyle.Flat;
             btnAddProduct.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddProduct.ForeColor = Color.White;
-            btnAddProduct.Location = new Point(800, 205);
+            btnAddProduct.Location = new Point(750, 180);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(160, 35);
             btnAddProduct.TabIndex = 17;
@@ -139,7 +165,7 @@
             // numMinimumStock
             // 
             numMinimumStock.Font = new Font("Segoe UI", 10F);
-            numMinimumStock.Location = new Point(510, 166);
+            numMinimumStock.Location = new Point(492, 132);
             numMinimumStock.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numMinimumStock.Name = "numMinimumStock";
             numMinimumStock.Size = new Size(180, 25);
@@ -150,7 +176,7 @@
             lblMinimumStock.AutoSize = true;
             lblMinimumStock.Font = new Font("Segoe UI", 10F);
             lblMinimumStock.ForeColor = Color.FromArgb(31, 41, 55);
-            lblMinimumStock.Location = new Point(400, 170);
+            lblMinimumStock.Location = new Point(381, 134);
             lblMinimumStock.Name = "lblMinimumStock";
             lblMinimumStock.Size = new Size(105, 19);
             lblMinimumStock.TabIndex = 15;
@@ -159,7 +185,7 @@
             // numInitialQuantity
             // 
             numInitialQuantity.Font = new Font("Segoe UI", 10F);
-            numInitialQuantity.Location = new Point(140, 166);
+            numInitialQuantity.Location = new Point(150, 149);
             numInitialQuantity.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numInitialQuantity.Name = "numInitialQuantity";
             numInitialQuantity.Size = new Size(180, 25);
@@ -170,7 +196,7 @@
             lblInitialQuantity.AutoSize = true;
             lblInitialQuantity.Font = new Font("Segoe UI", 10F);
             lblInitialQuantity.ForeColor = Color.FromArgb(31, 41, 55);
-            lblInitialQuantity.Location = new Point(20, 170);
+            lblInitialQuantity.Location = new Point(20, 155);
             lblInitialQuantity.Name = "lblInitialQuantity";
             lblInitialQuantity.Size = new Size(100, 19);
             lblInitialQuantity.TabIndex = 13;
@@ -181,7 +207,7 @@
             numSellingPrice.DecimalPlaces = 2;
             numSellingPrice.Font = new Font("Segoe UI", 10F);
             numSellingPrice.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            numSellingPrice.Location = new Point(510, 116);
+            numSellingPrice.Location = new Point(492, 90);
             numSellingPrice.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numSellingPrice.Name = "numSellingPrice";
             numSellingPrice.Size = new Size(180, 25);
@@ -192,7 +218,7 @@
             lblSellingPrice.AutoSize = true;
             lblSellingPrice.Font = new Font("Segoe UI", 10F);
             lblSellingPrice.ForeColor = Color.FromArgb(31, 41, 55);
-            lblSellingPrice.Location = new Point(400, 120);
+            lblSellingPrice.Location = new Point(400, 92);
             lblSellingPrice.Name = "lblSellingPrice";
             lblSellingPrice.Size = new Size(81, 19);
             lblSellingPrice.TabIndex = 11;
@@ -203,7 +229,7 @@
             numPurchaseCost.DecimalPlaces = 2;
             numPurchaseCost.Font = new Font("Segoe UI", 10F);
             numPurchaseCost.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            numPurchaseCost.Location = new Point(140, 116);
+            numPurchaseCost.Location = new Point(150, 92);
             numPurchaseCost.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numPurchaseCost.Name = "numPurchaseCost";
             numPurchaseCost.Size = new Size(180, 25);
@@ -215,7 +241,7 @@
             lblPurchaseCost.AutoSize = true;
             lblPurchaseCost.Font = new Font("Segoe UI", 10F);
             lblPurchaseCost.ForeColor = Color.FromArgb(31, 41, 55);
-            lblPurchaseCost.Location = new Point(20, 120);
+            lblPurchaseCost.Location = new Point(24, 96);
             lblPurchaseCost.Name = "lblPurchaseCost";
             lblPurchaseCost.Size = new Size(96, 19);
             lblPurchaseCost.TabIndex = 9;
@@ -227,7 +253,7 @@
             cmbUnit.Font = new Font("Segoe UI", 10F);
             cmbUnit.FormattingEnabled = true;
             cmbUnit.Items.AddRange(new object[] { "Piece", "Box", "Kg", "Litre", "Pack" });
-            cmbUnit.Location = new Point(450, 66);
+            cmbUnit.Location = new Point(476, 47);
             cmbUnit.Name = "cmbUnit";
             cmbUnit.Size = new Size(180, 25);
             cmbUnit.TabIndex = 7;
@@ -237,7 +263,7 @@
             lblUnit.AutoSize = true;
             lblUnit.Font = new Font("Segoe UI", 10F);
             lblUnit.ForeColor = Color.FromArgb(31, 41, 55);
-            lblUnit.Location = new Point(400, 70);
+            lblUnit.Location = new Point(413, 50);
             lblUnit.Name = "lblUnit";
             lblUnit.Size = new Size(35, 19);
             lblUnit.TabIndex = 6;
@@ -249,7 +275,7 @@
             cmbCategory.Font = new Font("Segoe UI", 10F);
             cmbCategory.FormattingEnabled = true;
             cmbCategory.Items.AddRange(new object[] { "Stationery", "Electronics", "Food and Beverages", "Cleaning Supplies", "Other" });
-            cmbCategory.Location = new Point(140, 66);
+            cmbCategory.Location = new Point(140, 50);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(220, 25);
             cmbCategory.TabIndex = 5;
@@ -259,7 +285,7 @@
             lblCategory.AutoSize = true;
             lblCategory.Font = new Font("Segoe UI", 10F);
             lblCategory.ForeColor = Color.FromArgb(31, 41, 55);
-            lblCategory.Location = new Point(20, 70);
+            lblCategory.Location = new Point(25, 56);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(65, 19);
             lblCategory.TabIndex = 4;
@@ -268,7 +294,7 @@
             // txtProductName
             // 
             txtProductName.Font = new Font("Segoe UI", 10F);
-            txtProductName.Location = new Point(510, 16);
+            txtProductName.Location = new Point(442, 13);
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(220, 25);
             txtProductName.TabIndex = 3;
@@ -278,7 +304,7 @@
             lblProductName.AutoSize = true;
             lblProductName.Font = new Font("Segoe UI", 10F);
             lblProductName.ForeColor = Color.FromArgb(31, 41, 55);
-            lblProductName.Location = new Point(400, 20);
+            lblProductName.Location = new Point(339, 16);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(97, 19);
             lblProductName.TabIndex = 2;
@@ -287,7 +313,7 @@
             // txtProductCode
             // 
             txtProductCode.Font = new Font("Segoe UI", 10F);
-            txtProductCode.Location = new Point(140, 16);
+            txtProductCode.Location = new Point(102, 13);
             txtProductCode.Name = "txtProductCode";
             txtProductCode.Size = new Size(220, 25);
             txtProductCode.TabIndex = 1;
@@ -297,7 +323,7 @@
             lblProductCode.AutoSize = true;
             lblProductCode.Font = new Font("Segoe UI", 10F);
             lblProductCode.ForeColor = Color.FromArgb(31, 41, 55);
-            lblProductCode.Location = new Point(20, 20);
+            lblProductCode.Location = new Point(3, 13);
             lblProductCode.Name = "lblProductCode";
             lblProductCode.Size = new Size(93, 19);
             lblProductCode.TabIndex = 0;
@@ -312,9 +338,9 @@
             pnlProductsList.Controls.Add(lvProducts);
             pnlProductsList.Controls.Add(txtSearchProducts);
             pnlProductsList.Controls.Add(lblProductListTitle);
-            pnlProductsList.Location = new Point(25, 340);
+            pnlProductsList.Location = new Point(10, 310);
             pnlProductsList.Name = "pnlProductsList";
-            pnlProductsList.Size = new Size(1030, 300);
+            pnlProductsList.Size = new Size(934, 270);
             pnlProductsList.TabIndex = 2;
             // 
             // btnDeleteProduct
@@ -323,7 +349,7 @@
             btnDeleteProduct.FlatStyle = FlatStyle.Flat;
             btnDeleteProduct.Font = new Font("Segoe UI", 10F);
             btnDeleteProduct.ForeColor = Color.White;
-            btnDeleteProduct.Location = new Point(155, 245);
+            btnDeleteProduct.Location = new Point(168, 227);
             btnDeleteProduct.Name = "btnDeleteProduct";
             btnDeleteProduct.Size = new Size(130, 35);
             btnDeleteProduct.TabIndex = 4;
@@ -337,7 +363,7 @@
             btnEditProduct.FlatStyle = FlatStyle.Flat;
             btnEditProduct.Font = new Font("Segoe UI", 10F);
             btnEditProduct.ForeColor = Color.White;
-            btnEditProduct.Location = new Point(20, 245);
+            btnEditProduct.Location = new Point(14, 227);
             btnEditProduct.Name = "btnEditProduct";
             btnEditProduct.Size = new Size(120, 35);
             btnEditProduct.TabIndex = 3;
@@ -347,13 +373,13 @@
             // 
             // lvProducts
             // 
-            lvProducts.Columns.AddRange(new ColumnHeader[] { colProductCode, colProductName, colCategory, colQuantity, colUnit, colSellingPrice, colStockStatus });
+            lvProducts.Columns.AddRange(new ColumnHeader[] { colProductCode, colProductName, colCategory, colQuantity, colUnit, colSellingPrice, colStockStatus, colSupplier });
             lvProducts.FullRowSelect = true;
             lvProducts.GridLines = true;
-            lvProducts.Location = new Point(20, 90);
+            lvProducts.Location = new Point(14, 81);
             lvProducts.MultiSelect = false;
             lvProducts.Name = "lvProducts";
-            lvProducts.Size = new Size(980, 140);
+            lvProducts.Size = new Size(910, 140);
             lvProducts.TabIndex = 2;
             lvProducts.UseCompatibleStateImageBehavior = false;
             lvProducts.View = View.Details;
@@ -393,6 +419,11 @@
             colStockStatus.Text = "Stock Status";
             colStockStatus.Width = 110;
             // 
+            // colSupplier
+            // 
+            colSupplier.Text = "Supplier";
+            colSupplier.Width = 130;
+            // 
             // txtSearchProducts
             // 
             txtSearchProducts.Font = new Font("Segoe UI", 10F);
@@ -419,7 +450,7 @@
             btnBackToDashboard.BackColor = Color.FromArgb(229, 234, 240);
             btnBackToDashboard.FlatStyle = FlatStyle.Flat;
             btnBackToDashboard.ForeColor = Color.FromArgb(31, 58, 95);
-            btnBackToDashboard.Location = new Point(900, 20);
+            btnBackToDashboard.Location = new Point(721, 17);
             btnBackToDashboard.Name = "btnBackToDashboard";
             btnBackToDashboard.Size = new Size(150, 35);
             btnBackToDashboard.TabIndex = 3;
@@ -432,7 +463,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 246, 249);
-            ClientSize = new Size(1084, 661);
+            ClientSize = new Size(958, 597);
             Controls.Add(btnBackToDashboard);
             Controls.Add(pnlProductsList);
             Controls.Add(pnlProductEntry);
@@ -488,5 +519,8 @@
         private Button btnEditProduct;
         private Button btnDeleteProduct;
         private Button btnBackToDashboard;
+        private Label lblSupplier;
+        private ComboBox cmbSupplier;
+        private ColumnHeader colSupplier;
     }
 }

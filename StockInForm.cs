@@ -17,6 +17,11 @@ namespace IMS
             cmbProduct.DisplayMember = "ProductName";
             cmbProduct.ValueMember = "ProductCode";
             cmbProduct.DataSource = InventoryData.Products;
+
+            // Load suppliers
+            cmbSupplier.DisplayMember = "SupplierName";
+            cmbSupplier.ValueMember = "SupplierCode";
+            cmbSupplier.DataSource = InventoryData.Suppliers;
         }
 
         private void StockInForm_Load(object sender, EventArgs e)
@@ -35,6 +40,15 @@ namespace IMS
 
             // Get the selected product
             Product product = (Product)cmbProduct.SelectedItem;
+            // Check that a supplier is selected
+            if (cmbSupplier.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a supplier.");
+                return;
+            }
+
+            // Get the selected supplier
+            Supplier supplier = (Supplier)cmbSupplier.SelectedItem;
 
             // Get the quantity to add
             int quantityToAdd = (int)numQuantity.Value;
@@ -54,6 +68,7 @@ namespace IMS
             {
                 ProductCode = product.ProductCode,
                 ProductName = product.ProductName,
+                SupplierCode = supplier.SupplierCode,
                 TransactionType = "Stock In",
                 Quantity = quantityToAdd,
 
