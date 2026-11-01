@@ -8,24 +8,19 @@
     "net10.0-windows": []
   },
   "packageFolders": {
-    "C:\\Users\\Ealphaz\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\fsc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\InventoryManagement\\IMS\\IMS\\IMS.csproj",
+      "projectUniqueName": "C:\\Users\\fsc\\source\\repos\\Belete-Dereje\\IMS\\IMS.csproj",
       "projectName": "IMS",
-      "projectPath": "E:\\InventoryManagement\\IMS\\IMS\\IMS.csproj",
-      "packagesPath": "C:\\Users\\Ealphaz\\.nuget\\packages\\",
-      "outputPath": "E:\\InventoryManagement\\IMS\\IMS\\obj\\",
+      "projectPath": "C:\\Users\\fsc\\source\\repos\\Belete-Dereje\\IMS\\IMS.csproj",
+      "packagesPath": "C:\\Users\\fsc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fsc\\source\\repos\\Belete-Dereje\\IMS\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ealphaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\fsc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
