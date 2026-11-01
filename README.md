@@ -13,6 +13,7 @@ A desktop inventory management application built with C# and Windows Forms for t
 - Windows Forms-based user interface
 
 ## Demo Video
+#click on the video to watch the demo
 
 <p align="center">
   <a href="https://youtu.be/52ZLYhCdoaI" target="_blank" rel="noopener noreferrer">
