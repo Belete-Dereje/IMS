@@ -14,6 +14,8 @@ namespace IMS
 
         public int Quantity { get; set; }
 
+        public decimal Profit { get; set; }
+
         public string Notes { get; set; } = "";
 
         public DateTime TransactionDate { get; set; }

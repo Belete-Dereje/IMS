@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             pnlRegisterCard = new Panel();
-            lblTitle = new Label();
-            lblFullName = new Label();
-            lblRegUsername = new Label();
-            lblEmail = new Label();
-            lblRegPassword = new Label();
-            lblConfirmPassword = new Label();
-            txtFullName = new TextBox();
-            txtRegUsername = new TextBox();
-            txtEmail = new TextBox();
-            txtRegPassword = new TextBox();
-            txtConfirmPassword = new TextBox();
-            btnCreateAccount = new Button();
             btnBackToLogin = new Button();
+            btnCreateAccount = new Button();
+            txtConfirmPassword = new TextBox();
+            txtRegPassword = new TextBox();
+            txtEmail = new TextBox();
+            txtRegUsername = new TextBox();
+            txtFullName = new TextBox();
+            lblConfirmPassword = new Label();
+            lblRegPassword = new Label();
+            lblEmail = new Label();
+            lblRegUsername = new Label();
+            lblFullName = new Label();
+            lblTitle = new Label();
             pnlRegisterCard.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,102 +67,18 @@
             pnlRegisterCard.Size = new Size(460, 520);
             pnlRegisterCard.TabIndex = 0;
             // 
-            // lblTitle
+            // btnBackToLogin
             // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(134, 29);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(177, 31);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "Create Account";
-            // 
-            // lblFullName
-            // 
-            lblFullName.AutoSize = true;
-            lblFullName.Location = new Point(86, 103);
-            lblFullName.Name = "lblFullName";
-            lblFullName.Size = new Size(61, 15);
-            lblFullName.TabIndex = 1;
-            lblFullName.Text = "Full Name";
-            // 
-            // lblRegUsername
-            // 
-            lblRegUsername.AutoSize = true;
-            lblRegUsername.Location = new Point(86, 153);
-            lblRegUsername.Name = "lblRegUsername";
-            lblRegUsername.Size = new Size(60, 15);
-            lblRegUsername.TabIndex = 2;
-            lblRegUsername.Text = "Username";
-            // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(86, 200);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(36, 15);
-            lblEmail.TabIndex = 3;
-            lblEmail.Text = "Email";
-            // 
-            // lblRegPassword
-            // 
-            lblRegPassword.AutoSize = true;
-            lblRegPassword.Location = new Point(85, 249);
-            lblRegPassword.Name = "lblRegPassword";
-            lblRegPassword.Size = new Size(57, 15);
-            lblRegPassword.TabIndex = 4;
-            lblRegPassword.Text = "Password";
-            // 
-            // lblConfirmPassword
-            // 
-            lblConfirmPassword.AutoSize = true;
-            lblConfirmPassword.Location = new Point(67, 302);
-            lblConfirmPassword.Name = "lblConfirmPassword";
-            lblConfirmPassword.Size = new Size(104, 15);
-            lblConfirmPassword.TabIndex = 5;
-            lblConfirmPassword.Text = "Confirm Password";
-            // 
-            // txtFullName
-            // 
-            txtFullName.Font = new Font("Segoe UI", 11F);
-            txtFullName.Location = new Point(200, 96);
-            txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(163, 27);
-            txtFullName.TabIndex = 6;
-            // 
-            // txtRegUsername
-            // 
-            txtRegUsername.Font = new Font("Segoe UI", 11F);
-            txtRegUsername.Location = new Point(200, 141);
-            txtRegUsername.Name = "txtRegUsername";
-            txtRegUsername.Size = new Size(163, 27);
-            txtRegUsername.TabIndex = 7;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(200, 188);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(163, 27);
-            txtEmail.TabIndex = 8;
-            // 
-            // txtRegPassword
-            // 
-            txtRegPassword.Font = new Font("Segoe UI", 11F);
-            txtRegPassword.Location = new Point(200, 237);
-            txtRegPassword.Name = "txtRegPassword";
-            txtRegPassword.PasswordChar = '*';
-            txtRegPassword.Size = new Size(163, 27);
-            txtRegPassword.TabIndex = 9;
-            // 
-            // txtConfirmPassword
-            // 
-            txtConfirmPassword.Font = new Font("Segoe UI", 11F);
-            txtConfirmPassword.Location = new Point(200, 290);
-            txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.PasswordChar = '*';
-            txtConfirmPassword.Size = new Size(163, 27);
-            txtConfirmPassword.TabIndex = 10;
+            btnBackToLogin.BackColor = Color.FromArgb(47, 93, 138);
+            btnBackToLogin.FlatStyle = FlatStyle.Flat;
+            btnBackToLogin.ForeColor = Color.White;
+            btnBackToLogin.Location = new Point(67, 379);
+            btnBackToLogin.Name = "btnBackToLogin";
+            btnBackToLogin.Size = new Size(101, 33);
+            btnBackToLogin.TabIndex = 12;
+            btnBackToLogin.Text = "Back to Login";
+            btnBackToLogin.UseVisualStyleBackColor = false;
+            btnBackToLogin.Click += btnBackToLogin_Click;
             // 
             // btnCreateAccount
             // 
@@ -176,18 +92,102 @@
             btnCreateAccount.Text = "Register";
             btnCreateAccount.UseVisualStyleBackColor = false;
             // 
-            // btnBackToLogin
+            // txtConfirmPassword
             // 
-            btnBackToLogin.BackColor = Color.FromArgb(47, 93, 138);
-            btnBackToLogin.FlatStyle = FlatStyle.Flat;
-            btnBackToLogin.ForeColor = Color.White;
-            btnBackToLogin.Location = new Point(67, 379);
-            btnBackToLogin.Name = "btnBackToLogin";
-            btnBackToLogin.Size = new Size(101, 33);
-            btnBackToLogin.TabIndex = 12;
-            btnBackToLogin.Text = "Back to Login";
-            btnBackToLogin.UseVisualStyleBackColor = false;
-            btnBackToLogin.Click += btnBackToLogin_Click;
+            txtConfirmPassword.Font = new Font("Segoe UI", 11F);
+            txtConfirmPassword.Location = new Point(200, 290);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
+            txtConfirmPassword.Size = new Size(163, 27);
+            txtConfirmPassword.TabIndex = 10;
+            // 
+            // txtRegPassword
+            // 
+            txtRegPassword.Font = new Font("Segoe UI", 11F);
+            txtRegPassword.Location = new Point(200, 237);
+            txtRegPassword.Name = "txtRegPassword";
+            txtRegPassword.PasswordChar = '*';
+            txtRegPassword.Size = new Size(163, 27);
+            txtRegPassword.TabIndex = 9;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Font = new Font("Segoe UI", 11F);
+            txtEmail.Location = new Point(200, 188);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(163, 27);
+            txtEmail.TabIndex = 8;
+            // 
+            // txtRegUsername
+            // 
+            txtRegUsername.Font = new Font("Segoe UI", 11F);
+            txtRegUsername.Location = new Point(200, 141);
+            txtRegUsername.Name = "txtRegUsername";
+            txtRegUsername.Size = new Size(163, 27);
+            txtRegUsername.TabIndex = 7;
+            // 
+            // txtFullName
+            // 
+            txtFullName.Font = new Font("Segoe UI", 11F);
+            txtFullName.Location = new Point(200, 96);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(163, 27);
+            txtFullName.TabIndex = 6;
+            // 
+            // lblConfirmPassword
+            // 
+            lblConfirmPassword.AutoSize = true;
+            lblConfirmPassword.Location = new Point(67, 302);
+            lblConfirmPassword.Name = "lblConfirmPassword";
+            lblConfirmPassword.Size = new Size(104, 15);
+            lblConfirmPassword.TabIndex = 5;
+            lblConfirmPassword.Text = "Confirm Password";
+            // 
+            // lblRegPassword
+            // 
+            lblRegPassword.AutoSize = true;
+            lblRegPassword.Location = new Point(85, 249);
+            lblRegPassword.Name = "lblRegPassword";
+            lblRegPassword.Size = new Size(57, 15);
+            lblRegPassword.TabIndex = 4;
+            lblRegPassword.Text = "Password";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(86, 200);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(36, 15);
+            lblEmail.TabIndex = 3;
+            lblEmail.Text = "Email";
+            // 
+            // lblRegUsername
+            // 
+            lblRegUsername.AutoSize = true;
+            lblRegUsername.Location = new Point(86, 153);
+            lblRegUsername.Name = "lblRegUsername";
+            lblRegUsername.Size = new Size(60, 15);
+            lblRegUsername.TabIndex = 2;
+            lblRegUsername.Text = "Username";
+            // 
+            // lblFullName
+            // 
+            lblFullName.AutoSize = true;
+            lblFullName.Location = new Point(86, 103);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(61, 15);
+            lblFullName.TabIndex = 1;
+            lblFullName.Text = "Full Name";
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(134, 29);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(177, 31);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Create Account";
             // 
             // RegisterForm
             // 

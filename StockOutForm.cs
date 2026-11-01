@@ -56,6 +56,11 @@ namespace IMS
                 SupplierCode = "",
                 TransactionType = "Stock Out",
                 Quantity = quantityToRemove,
+
+                // Profit earned = (selling price - purchase cost) x quantity sold
+                Profit = (product.SellingPrice - product.PurchaseCost)
+                         * quantityToRemove,
+
                 Notes = txtNotes.Text.Trim(),
                 TransactionDate = DateTime.Now
             };

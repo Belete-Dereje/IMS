@@ -88,7 +88,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 11F);
-            txtPassword.Location = new Point(141, 270);
+            txtPassword.Location = new Point(168, 265);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
@@ -98,7 +98,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 11F);
-            txtUsername.Location = new Point(141, 217);
+            txtUsername.Location = new Point(168, 195);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "Username";
             txtUsername.Size = new Size(153, 27);
@@ -117,7 +117,7 @@
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(61, 277);
+            lblPassword.Location = new Point(61, 272);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(57, 15);
             lblPassword.TabIndex = 3;
@@ -126,7 +126,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(58, 217);
+            lblUsername.Location = new Point(61, 202);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(60, 15);
             lblUsername.TabIndex = 2;
@@ -137,7 +137,7 @@
             lblSubtitle.AutoSize = true;
             lblSubtitle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSubtitle.ForeColor = Color.FromArgb(107, 114, 128);
-            lblSubtitle.Location = new Point(135, 124);
+            lblSubtitle.Location = new Point(111, 124);
             lblSubtitle.Name = "lblSubtitle";
             lblSubtitle.Size = new Size(116, 17);
             lblSubtitle.TabIndex = 1;
