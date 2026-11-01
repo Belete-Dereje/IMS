@@ -15,12 +15,10 @@ A desktop inventory management application built with C# and Windows Forms for t
 ## Demo Video
 
 <p align="center">
-  <a href="video/IMS.mp4" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Open-Demo%20Video-FF0000?style=for-the-badge&logo=google-chrome" alt="Open Demo Video" width="260" />
+  <a href="https://youtu.be/52ZLYhCdoaI" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/52ZLYhCdoaI/maxresdefault.jpg" alt="IMS demo video preview" width="800" />
   </a>
 </p>
-
-> The demo video is stored in the repository and can be opened directly in a browser or downloaded from the link above.
 
 ## Project Overview
 
